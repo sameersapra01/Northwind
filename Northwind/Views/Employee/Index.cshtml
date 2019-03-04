@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Northwind.Models.Employee>
+
+@using Northwind.Models;
+
+@{
+    ViewBag.Title = "All Employees";
+}
+
+<h2>All Employees</h2>
+<table>
+    <tr>
+        <td>Employee ID</td>
+        <td>First Name</td>
+    </tr>
+
+    @foreach (Employee employee in @Model)
+    {
+        <tr>
+            <td>@employee.EmployeeID</td>
+            <td>@employee.FirstName</td>
+        </tr>
+    }
+</table>
